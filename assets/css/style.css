@@ -222,9 +222,6 @@ body, html{
       transition: 0.3s ease;
     }
 
-    .enquire-btn:hover {
-      background: #f2f2f2;
-    }
 
     /* ---------- Right Side Carousels ---------- */
     .carousel-container {
@@ -324,81 +321,165 @@ body, html{
 margin-top: 20px;}
 }
 
+/* ---------- About Section Base Styles ---------- */
+.about-section {
+  padding: 100px 0;
+}
 
-    .about-section {
-      padding: 100px 0;
-    }
+.section-title-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  z-index: 9;
+}
 
-    .about-img img {
-      width: 100%;
-      border-radius: 10px;
-      object-fit: cover;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
+.section-title {
+  position: relative;
 
-    .section-title {
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-size: 26px;
-      margin-bottom: 15px;
-      font-family: var(--volgarie_font);
-    }
+  z-index: 99;
+  margin-bottom: 30px;
+  margin-top: -6px;
+}
+.section-title h2{
+    font-family: var(--title-font);
+}
+.section-title .sub-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--theme-color);
+  font-family: var(--title-font);
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
 
-    .section-subtitle {
-      font-size: 18px;
-      color: #666;
-      margin-bottom: 25px;
-    }
+.section-subheading {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 26px;
+  margin-bottom: 15px;
+  font-family: var(--volgarie_font);
+}
 
-    .about-text p {
-      color: #444;
-      line-height: 1.8;
-      margin-bottom: 18px;
-    }
+.about-text p {
+  color: #444;
+  margin-left: 4px;
+  text-align: justify;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
 
-    .btn-dark {
-      border-radius: 0;
-      padding: 10px 25px;
-      background-color: #000;
-      color: #fff;
-      transition: all 0.3s ease;
-    }
 
-    .btn-dark:hover {
-      background-color: #f8c100;
-      color: #000;
-    }
 
-    .stats {
-      display: flex;
-      gap: 30px;
-      margin-top: 40px;
-      flex-wrap: wrap;
-    }
+/* About Image */
+.about-img img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
 
-    .stat-box {
-      text-align: center;
-      flex: 1 1 30%;
-    }
+/* Stats Section */
+.stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-    .stat-box h3 {
-      font-size: 32px;
-      font-weight: 700;
-      color: #000;
-      margin-bottom: 5px;
-    }
+.stat-box {
+  text-align: center;
+  flex: 1 1 30%;
+}
 
-    .stat-box p {
-      font-size: 15px;
-      color: #666;
-    }
+.stat-box h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 5px;
+}
 
-    @media (max-width: 991px) {
-      .about-section {
-        text-align: center;
-      }
-      .stats {
-        justify-content: center;
-      }
-    }
+.stat-box p {
+  font-size: 15px;
+  color: #666;
+}
+
+/* ---------- Responsive Media Queries ---------- */
+
+/* Large Tablets / Laptops */
+@media (max-width: 1200px) {
+  .section-subheading {
+    font-size: 24px;
+  }
+  .stat-box h3 {
+    font-size: 28px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 991px) {
+  .about-section {
+    text-align: center;
+    padding: 80px 20px;
+  }
+
+  .about-text {
+    margin-top: 30px;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+
+  .stat-box {
+    flex: 1 1 40%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Large Phones */
+@media (max-width: 768px) {
+  .section-title .sub-title {
+    font-size: 16px;
+  }
+
+  .section-subheading {
+    font-size: 22px;
+  }
+
+  .stat-box h3 {
+    font-size: 24px;
+  }
+
+  .about-img img {
+    height: auto;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 576px) {
+  .section-title .sub-title {
+    font-size: 14px;
+  }
+
+  .section-subheading {
+    font-size: 20px;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+
+  .stat-box {
+    flex: 1 1 100%;
+    margin-bottom: 15px;
+  }
+
+  .about-section {
+    padding: 60px 15px;
+  }
+}

@@ -42,3 +42,31 @@ function type() {
 }
 
 type();
+const services = document.querySelectorAll('.service');
+let activeIndex = 0;
+let isScrolling = false;
+
+// Show first section on load
+services[0].querySelector('.service-detail').classList.add('active');
+
+window.addEventListener('wheel', (e) => {
+  if (isScrolling) return; // prevent rapid scroll triggers
+  isScrolling = true;
+
+  if (e.deltaY > 0 && activeIndex < services.length - 1) {
+    // Scroll down
+    services[activeIndex].querySelector('.service-detail').classList.remove('active');
+    activeIndex++;
+    services[activeIndex].querySelector('.service-detail').classList.add('active');
+  } else if (e.deltaY < 0 && activeIndex > 0) {
+    // Scroll up
+    services[activeIndex].querySelector('.service-detail').classList.remove('active');
+    activeIndex--;
+    services[activeIndex].querySelector('.service-detail').classList.add('active');
+  }
+
+  // Allow next scroll after animation (700ms)
+  setTimeout(() => {
+    isScrolling = false;
+  }, 700);
+});

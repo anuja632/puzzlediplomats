@@ -7,6 +7,7 @@
         track.style.animationPlayState = 'running';
       });
     });
+    
     const words = ["Revenue", "Profit", "Results", "Growth"];
 let i = 0;
 let j = 0;
@@ -42,6 +43,7 @@ function type() {
 }
 
 type();
+
 const services = document.querySelectorAll('.service');
 let activeIndex = 0;
 let isScrolling = false;
@@ -70,3 +72,36 @@ window.addEventListener('wheel', (e) => {
     isScrolling = false;
   }, 700);
 });
+   //>> Testimonial Slider2 Start <<//
+    if($('.testimonial-slider2').length > 0) {
+        const testimonialSlider2 = new Swiper(".testimonial-slider2", {
+            spaceBetween: 30,
+            speed: 2000,
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                prevEl: ".array-prev",
+                nextEl: ".array-next",
+            },
+            breakpoints: {
+                1199: {
+                    slidesPerView: 1,
+                },
+                991: {
+                    slidesPerView: 1,
+                },
+                767: {
+                    slidesPerView: 1,
+                },
+                575: {
+                    slidesPerView: 1,
+                },
+                0: {
+                    slidesPerView: 1,
+                },
+            },
+        });
+    }

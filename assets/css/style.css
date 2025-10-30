@@ -38,7 +38,7 @@ body, html{
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-}
+ background:#fff;}
     /* Navbar with patterned dark background */
     .navbar {
       background: #00008b url("https://studywise.online/assets/img/update1/bg/pattern_bg_2.png");
@@ -276,12 +276,16 @@ section.hero::before {
       gap: 1.2rem;
     }
 
-    .carousel-track img {
-      width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-      transition: transform 0.3s;
-    }
+.carousel-track img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+  padding: 10px; /* space inside */
+  background: #ffffff; /* or any color like #f5f5f5, #eaeaea */
+  object-fit: cover; /* keeps image HD and not stretched */
+  box-sizing: border-box; /* ensures padding doesn’t distort size */
+}
 
     .carousel-track img:hover {
       transform: scale(1.05);
@@ -410,32 +414,6 @@ margin-top: 20px;}
   border-radius: 10px;
   object-fit: cover;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* Stats Section */
-.stats {
-  display: flex;
-  gap: 20px;
-  margin-top: 40px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.stat-box {
-  text-align: center;
-  flex: 1 1 30%;
-}
-
-.stat-box h3 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 5px;
-}
-
-.stat-box p {
-  font-size: 15px;
-  color: #666;
 }
 
 /* ---------- Responsive Media Queries ---------- */
@@ -602,7 +580,7 @@ margin-top: 20px;}
 
 
   .service-detail .text {
-    flex: 1 1 55%;
+    flex: 1 1 70%;
     min-width: 250px;
   }
 
@@ -614,13 +592,13 @@ margin-top: 20px;}
   }
 
   .service-detail img {
-    flex: 0 0 36%;
-    max-width: 36%;
-    min-width: 160px;
-    height: 160px;
+    flex: 0 0 30%;
+    /* max-width: 36%; */
+    /* min-width: 160px; */
+    height: 250px;
     border-radius: 10px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    object-fit: cover;
+    object-fit: contain;
   }
 
   /* Visual cue for the active header */
@@ -1311,6 +1289,7 @@ padding: 20px;
       font-weight: 500;
       margin-top: 15px;
     }
+    
 /* Stats */
 .stats {
   margin-top: 60px;
@@ -1382,7 +1361,7 @@ padding: 20px;
 .workflow-card {
   background: #fff;
   border-radius: 25px;
-  padding: 40px 30px;
+  padding: 40px 30px 20px;
   height: 360px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transform: scale(0.8);
@@ -1444,8 +1423,7 @@ padding: 20px;
 .swiper-button-prev::after {
   font-size: 18px;
 }
-
-.slider {
+.slider { 
   width: 100%;
   overflow: hidden;
   padding: 2.5rem 0;
@@ -1462,22 +1440,175 @@ padding: 20px;
   flex: 0 0 auto;
   width: 400px;
   padding: 0 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Make hover effect apply to image only */
+.item a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .item img {
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
-  pointer-events: none;
-}
-img:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  pointer-events: auto;
+  transition: transform 0.6s ease;
+  display: block;
 }
 
+/* Zoom on hover */
+.item a:hover img {
+  transform: scale(1.05);
+}
 
+/* Blue top-to-bottom overlay */
+.item a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 139, 0.2);
+  border-radius: 10px;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top center;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  z-index: 1;
+}
 
+.item a:hover::before {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+/* Scrolling animation */
 @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-250px * 10)); } /* move half width (first set) */
+  100% { transform: translateX(calc(-250px * 10)); }
+}
+
+.main{
+  margin: 0;
+  padding: 20px;
+  /* font-family: "Poppins", sans-serif; */
+  background: #00008b;
+  color: #e0e0e0;
+}
+
+.relationship-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 80px;
+  text-align: justify;
+ 
+}
+
+.left-content {
+  flex: 1;
+}
+
+.left-content h2 {
+  font-size: 34px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+
+
+.left-content p {
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.scroll-timeline {
+  position: relative;
+  width: 700px;
+  margin: auto;
+}
+
+/* Each step */
+.timeline-step {
+  display: flex;
+  align-items:center;
+  /* margin-bottom: 60px; */
+  opacity: 0.4;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.timeline-step.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Icon */
+.timeline-icon {
+  position: relative;
+  z-index: 2;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #1a1f2e;
+  border: 2px solid #00d4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #fff;
+  margin-right: 30px;
+}
+
+/* Connector line between icons */
+.timeline-connector {
+  position: relative;
+  left: 26px;
+  width: 2px;
+  height: 70px;
+  background: #333;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.timeline-connector::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #b052ff, #00d4ff);
+  transition: top 0.6s ease;
+}
+
+/* Text content */
+.timeline-content {
+  max-width: 400px;
+}
+
+.timeline-content h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.timeline-content p {
+  margin: 0;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.timeline-connector.fill::after {
+  top: 0;
 }

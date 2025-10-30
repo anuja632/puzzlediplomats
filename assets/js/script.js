@@ -44,34 +44,66 @@ function type() {
 
 type();
 
-const services = document.querySelectorAll('.service');
+const services = document.querySelectorAll('.service-detail');
+const headers = document.querySelectorAll('.service-header');
+const section = document.querySelector('#what-we-do');
+const scrollCircle = document.querySelector('#scrollCircle');
+
 let activeIndex = 0;
 let isScrolling = false;
 
-// Show first section on load
-services[0].querySelector('.service-detail').classList.add('active');
+// initialize first visible
+services[0].classList.add('active');
+headers[0].classList.add('active-header');
 
+// show scroll circle when section in view
+window.addEventListener('scroll', () => {
+  const rect = section.getBoundingClientRect();
+  const halfway = window.innerHeight / 2;
+
+  if (rect.top < halfway && rect.bottom > halfway) {
+    scrollCircle.classList.add('show');
+  } else {
+    scrollCircle.classList.remove('show');
+  }
+});
+
+// handle scroll reveal
 window.addEventListener('wheel', (e) => {
-  if (isScrolling) return; // prevent rapid scroll triggers
+  if (isScrolling) return;
   isScrolling = true;
 
-  if (e.deltaY > 0 && activeIndex < services.length - 1) {
-    // Scroll down
-    services[activeIndex].querySelector('.service-detail').classList.remove('active');
-    activeIndex++;
-    services[activeIndex].querySelector('.service-detail').classList.add('active');
-  } else if (e.deltaY < 0 && activeIndex > 0) {
-    // Scroll up
-    services[activeIndex].querySelector('.service-detail').classList.remove('active');
-    activeIndex--;
-    services[activeIndex].querySelector('.service-detail').classList.add('active');
+  // hide all details + reset headers
+  services.forEach(s => s.classList.remove('active'));
+  headers.forEach(h => h.classList.remove('active-header'));
+
+  if (e.deltaY > 0) {
+    // scroll down
+    activeIndex = Math.min(activeIndex + 1, services.length - 1);
+  } else {
+    // scroll up
+    activeIndex = Math.max(activeIndex - 1, 0);
   }
 
-  // Allow next scroll after animation (700ms)
-  setTimeout(() => {
-    isScrolling = false;
-  }, 700);
+  // activate current detail + header
+  services[activeIndex].classList.add('active');
+  headers[activeIndex].classList.add('active-header');
+
+  setTimeout(() => (isScrolling = false), 1000);
 });
+
+// reset when leaving section
+window.addEventListener('scroll', () => {
+  const rect = section.getBoundingClientRect();
+  if (rect.bottom < 0) {
+    activeIndex = 0;
+    services.forEach(s => s.classList.remove('active'));
+    headers.forEach(h => h.classList.remove('active-header'));
+    services[0].classList.add('active');
+    headers[0].classList.add('active-header');
+  }
+});
+
    //>> Testimonial Slider2 Start <<//
     if($('.testimonial-slider2').length > 0) {
         const testimonialSlider2 = new Swiper(".testimonial-slider2", {

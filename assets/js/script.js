@@ -39,6 +39,32 @@ function observeCounters(sectionSelector) {
 // Activate counters for both sections
 observeCounters('.overview-section');
 observeCounters('.about-section');
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      scrollTopBtn.classList.add('show-scroll');
+    } else {
+      scrollTopBtn.classList.remove('show-scroll');
+    }
+  });
+
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  const members = document.querySelectorAll(".team-member");
+
+function showOnScroll() {
+  members.forEach(member => {
+    const rect = member.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      member.classList.add("visible");
+    }
+  });
+}
+
+window.addEventListener("scroll", showOnScroll);
+showOnScroll();
 
 
     

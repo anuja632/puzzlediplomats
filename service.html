@@ -20,7 +20,7 @@
 </head>
 <body>
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg fixed-top " id="custom-navbar">
   <div class="container-fluid">
 
     <!-- White angled logo section -->
@@ -36,10 +36,9 @@
     <!-- Desktop nav links -->
     <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
       <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="">Service</a></li>
-
+        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
       </ul>
@@ -53,71 +52,193 @@
 </nav>
 
 
+<!-- ===== Services Banner Section Start ===== -->
+<section class="services-banner">
+  <div class="overlay"></div>
+  <div class="container">
+    <h1>We Build Real Estate Brands That <span>Buyers Trust</span></h1>
+    <p>
+      Digital strategies that convert attention into site visits, leads, and property sales.
+    </p>
+    <a href="#what-we-do" class="cta-btn">Explore Our Services</a>
+  </div>
+</section>
+<!-- ===== Services Banner Section End ===== -->
+
+<!-- ===== Services Carousel Section Start ===== -->
+<section class="services-carousel-section">
+  <div class="container-fluid">
+    <h5 class="sub-title text-center">Our Services</h5>
+    <h2 class="title text-center">We Build Real Estate Brands That <span>Buyers Trust</span></h2>
+    <p class="text-center mb-5">
+      Digital strategies that convert attention into site visits, leads, and property sales.
+    </p>
+
+    <!-- Swiper -->
+    <div class="swiper servicesSwiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+      
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <img src="./assets/image/mock2.png" alt="Creative Design">
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <img src="./assets/image/mock3.png" alt="Lead Generation">
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <img src="./assets/image/mock4.png" alt="Social Media">
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <img src="./assets/image/mock5.png" alt="SEO Optimization">
+          </div>
+        </div>
+           
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <img src="./assets/image/mock2.png" alt="Creative Design">
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <img src="./assets/image/mock3.png" alt="Lead Generation">
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <img src="./assets/image/mock4.png" alt="Social Media">
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <img src="./assets/image/mock5.png" alt="SEO Optimization">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- <div class="swiper-pagination"></div> -->
+    </div>
+  </div>
+</section>
+<!-- ===== Services Carousel Section End ===== -->
 
 
 
 
-  <!-- Footer Section Start -->
-<footer class="footer-section text-white pt-5 pb-4" style="background-color:#0E1A2B;">
+<!-- ===== Contact Section End ===== -->
+ <!-- ===== Floating Action Buttons ===== -->
+<div class="floating-icons">
+  <a href="tel:+917094858696" class="float-btn phone-btn" title="Call Now">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+
+  <a href="https://wa.me/917094858696" target="_blank" class="float-btn whatsapp-btn" title="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <button class="float-btn scroll-top-btn" id="scrollTopBtn" title="Go to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+</div>
+
+<!-- ===== Footer Section Start ===== -->
+<footer class="footer-section text-white">
   <div class="container">
     <div class="row g-4">
       
       <!-- Brand Info -->
-      <div class="col-lg-4 col-md-6">
-        <h3 class="fw-bold mb-3" style="color:#00B4D8;">Puzzle Diplomats</h3>
-        <p>We help real estate brands grow with strategy, creative content, and performance marketing — turning your projects into profitable success stories.</p>
+      <div class="col-lg-4 col-md-6 wow animate__animated animate__fadeInLeft" data-wow-delay="0.2s">
+        <div class="footer-logo mb-3">
+          <img src="assets/image/logo.png" alt="Puzzle Diplomats Logo" class="img-fluid" />
+        </div>
+        <p>
+          We help real estate brands grow with strategy, creative content, and performance marketing —
+          turning your projects into profitable success stories.
+        </p>
         <div class="social-links mt-3">
-          <a href="#" class="me-3 text-white"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" class="me-3 text-white"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" class="me-3 text-white"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" class="text-white"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61566677074509" target="_blank" class="me-2"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/in/puzzle-diplomats-digitalmarketing/" target="_blank" class="me-2"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/puzzlediplomatsmarketing/" target="_blank" class="me-2"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/917094858696" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
 
       <!-- Quick Links -->
-      <div class="col-lg-2 col-md-6">
-        <h5 class="fw-bold mb-3" style="color:#00B4D8;">Quick Links</h5>
+      <div class="col-lg-2 col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+        <h5 class="fw-bold mb-3">Quick Links</h5>
         <ul class="list-unstyled footer-links">
-          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
-          <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
-          <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
-          <!-- <li><a href="work.html" class="text-white text-decoration-none">Work</a></li> -->
-          <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
 
       <!-- Services -->
-      <div class="col-lg-3 col-md-6">
-        <h5 class="fw-bold mb-3" style="color:#00B4D8;">Our Solutions</h5>
+      <div class="col-lg-3 col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+        <h5 class="fw-bold mb-3">Our Solutions</h5>
         <ul class="list-unstyled footer-links">
-          <li><a href="#" class="text-white text-decoration-none">Brand Strategy</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Content & Creative</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Lead Generation</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Performance Marketing</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Web Development</a></li>
+          <li><a href="service.html">Brand Strategy</a></li>
+          <li><a href="service.html">Content & Creative</a></li>
+          <li><a href="service.html">Lead Generation</a></li>
+          <li><a href="service.html">Performance Marketing</a></li>
+          <li><a href="service.html">Web Development</a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="col-lg-3 col-md-6">
-        <h5 class="fw-bold mb-3" style="color:#00B4D8;">Get In Touch</h5>
+      <div class="col-lg-3 col-md-6 wow animate__animated animate__fadeInRight" data-wow-delay="0.5s">
+        <h5 class="fw-bold mb-3">Get In Touch</h5>
         <ul class="list-unstyled footer-contact">
-          <li class="mb-2"><i class="fa-solid fa-location-dot me-2"></i> Hosur, Tamil Nadu, India</li>
-          <li class="mb-2"><i class="fa-solid fa-envelope me-2"></i> info@puzzlediplomats.com</li>
-          <li><i class="fa-solid fa-phone me-2"></i> +91 98765 43210</li>
+          <li class="mb-2"><i class="fa-solid fa-location-dot me-2"></i> Bangalore, Dubai</li>
+          <li class="mb-2"><i class="fa-solid fa-envelope me-2"></i> puzzle@diplomats.co.in</li>
+          <li><i class="fa-solid fa-phone me-2"></i> +91 70948 58696</li>
         </ul>
       </div>
     </div>
 
-    <hr class="my-4" style="border-color: rgba(255,255,255,0.15);">
+    <hr class="my-4">
 
     <div class="row text-center">
       <div class="col-12">
-        <p class="mb-0 small">&copy; 2025 Puzzle Diplomats. All Rights Reserved. Empowering Real Estate Growth from Hosur.</p>
+        <p class="mb-0 small">
+          &copy; 2025 Puzzle Diplomats. All Rights Reserved. Empowering Real Estate Growth from Hosur.
+        </p>
       </div>
     </div>
   </div>
 </footer>
+<!-- ===== Footer Section End ===== -->
+
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <script>
   // Initialize WOW.js
@@ -146,6 +267,7 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="./assets/js/script.js"></script>
+<script src="./assets/js/slide.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

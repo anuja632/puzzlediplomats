@@ -20,7 +20,7 @@
 </head>
 <body>
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg fixed-top " id="custom-navbar">
   <div class="container-fluid">
 
     <!-- White angled logo section -->
@@ -36,10 +36,9 @@
     <!-- Desktop nav links -->
     <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
       <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="">Service</a></li>
-
+        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
       </ul>
@@ -51,6 +50,7 @@
     </div>
   </div>
 </nav>
+
 
 <!-- Offcanvas for mobile -->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
@@ -87,7 +87,7 @@
         Done-for-you marketing solutions that transform your brand into profit and growth.
       </p>
 
-      <a href="#" class="enquire-btn wow animate__animated animate__fadeInUp" data-wow-delay="0.8s">
+      <a href="#" class="cta-btn  wow animate__animated animate__fadeInUp" data-wow-delay="0.8s">
         Let’s Work Together
       </a>
     </div>
@@ -168,7 +168,7 @@
             Our strength lies in storytelling, smart design, and data-driven strategies that make your brand stand out and grow smarter.
           </p>
 
-          <a href="#" class="enquire-btn wow animate__animated animate__fadeIn" data-wow-delay=".7s">Know More</a>
+          <a href="#" class="cta-btn wow animate__animated animate__fadeIn" data-wow-delay=".7s">Know More</a>
 
           <!-- Stats -->
           <!-- Stats -->
@@ -285,7 +285,7 @@
       <div class="text">
         <p>We produce blogs, videos, infographics, and other content that demonstrates your expertise and highlights your listings. Our content strategy builds trust, engages buyers, and positions you as a thought leader in real estate.</p>
       </div>
-      <img src="./assets/image/service6.png" alt="Content Marketing">
+      <img src="./assets/image/service7.png" alt="Content Marketing">
     </div>
   </div>
 
@@ -297,7 +297,7 @@
       <div class="text">
         <p>We monitor and enhance your online presence, encouraging positive reviews and addressing feedback professionally. Our strategies maintain a credible brand image that inspires confidence among buyers and investors.</p>
       </div>
-      <img src="./assets/image/service8.png" alt="Reputation Management">
+      <img src="./assets/image/service8.jpg" alt="Reputation Management">
     </div>
   </div>
    <div class="service"  data-index="8">
@@ -307,7 +307,7 @@
       <div class="text">
         <p>Your logo is your first impression — we design strong, modern real estate logos that capture your brand’s vision and build instant recognition across all marketing platforms.</p>
       </div>
-      <img src="./assets/image/service9.png" alt="Logo Design">
+      <img src="./assets/image/service-9.png" alt="Logo Design">
     </div>
   </div>
   </div>
@@ -532,7 +532,7 @@
       <div class="our-work-text">
         <p>
 We craft powerful real estate stories that turn luxury projects into global success.        </p>
-        <button class="register-btn">DISCOVER OUR PROJECTS</button>
+        <button class="cta-btn">DISCOVER OUR PROJECTS</button>
       </div>
     </div>
 
@@ -569,66 +569,65 @@ We craft powerful real estate stories that turn luxury projects into global succ
 <!-- ===== Contact Section Start ===== -->
 <section class="contact-section py-5" style="background-color: #f8f9fa;">
   <div class="container">
-    <div class="text-center mb-5">
-      <span class="sub-title" >Get In Touch</span>
+    <div class="text-center mb-5 wow animate__animated animate__fadeInDown" data-wow-delay="0.2s">
+      <span class="sub-title">Get In Touch</span>
       <h2 style="color:#0a1f24; font-weight:700;">Let’s Build Your Real Estate Growth</h2>
       <p style="color:#444;">Have a project in mind? Let’s discuss how we can turn your real estate brand into a growth engine.</p>
     </div>
 
     <div class="row align-items-center">
-      <div class="col-lg-5 mb-4 mb-lg-0">
+      <div class="col-lg-5 mb-4 mb-lg-0 wow animate__animated animate__fadeInLeft" data-wow-delay="0.3s">
         <img src="https://img.freepik.com/premium-photo/businesswoman-with-mobile-phone-street-with-office-buildings_52137-25996.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" 
              alt="Contact Us" class="img-fluid rounded-4 shadow-sm">
       </div>
 
-      <div class="col-lg-7">
-<form action="https://formsubmit.co/puzzle@diplomats.co.in" method="POST" class="p-4 rounded-4 shadow-sm bg-white">
-  <!-- FormSubmit settings -->
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://puzzlediplomats.co.in/thankyou.html">
-  <input type="hidden" name="_subject" value="New Message from Puzzle Diplomats Website">
+      <div class="col-lg-7 wow animate__animated animate__fadeInRight" data-wow-delay="0.5s">
+        <form action="https://formsubmit.co/puzzle@diplomats.co.in" method="POST" class="p-4 rounded-4 shadow-sm bg-white">
+          <!-- FormSubmit settings -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://puzzlediplomats.co.in/thankyou.html">
+          <input type="hidden" name="_subject" value="New Message from Puzzle Diplomats Website">
 
-  <div class="row g-3">
-    <div class="col-md-6">
-      <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-    </div>
-    <div class="col-md-6">
-      <input type="email" name="email" class="form-control" placeholder="Email Address" required>
-    </div>
-    <div class="col-md-6">
-      <input type="tel" name="phone" class="form-control" placeholder="Phone Number" required>
-    </div>
-    <div class="col-md-6">
-      <select name="service" class="form-control" required>
-        <option value="" disabled selected>Select a Service</option>
-        <option value="Brand Strategy & Identity">Brand Strategy & Identity</option>
-        <option value="Website Design & Development">Website Design & Development</option>
-        <option value="Search Engine Optimization (SEO)">Search Engine Optimization (SEO)</option>
-        <option value="Social Media Marketing">Social Media Marketing</option>
-        <option value="Pay-Per-Click (PPC) Advertising">Pay-Per-Click (PPC) Advertising</option>
-        <option value="Email Marketing">Email Marketing</option>
-        <option value="Content Marketing">Content Marketing</option>
-        <option value="Online Reputation Management">Online Reputation Management</option>
-        <option value="Logo Designing">Logo Designing</option>
-      </select>
-    </div>
-    <div class="col-12">
-      <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
-    </div>
-    <div class="col-12 text-center">
-      <button type="submit" class="register-btn btn btn-dark px-5">
-        Send Message
-      </button>
-    </div>
-  </div>
-</form>
-
-
+          <div class="row g-3">
+            <div class="col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.7s">
+              <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+            </div>
+            <div class="col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.8s">
+              <input type="tel" name="phone" class="form-control" placeholder="Phone Number" required>
+            </div>
+            <div class="col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.9s">
+              <select name="service" class="form-control" required>
+                <option value="" disabled selected>Select a Service</option>
+                <option value="Brand Strategy & Identity">Brand Strategy & Identity</option>
+                <option value="Website Design & Development">Website Design & Development</option>
+                <option value="Search Engine Optimization (SEO)">Search Engine Optimization (SEO)</option>
+                <option value="Social Media Marketing">Social Media Marketing</option>
+                <option value="Pay-Per-Click (PPC) Advertising">Pay-Per-Click (PPC) Advertising</option>
+                <option value="Email Marketing">Email Marketing</option>
+                <option value="Content Marketing">Content Marketing</option>
+                <option value="Online Reputation Management">Online Reputation Management</option>
+                <option value="Logo Designing">Logo Designing</option>
+              </select>
+            </div>
+            <div class="col-12 wow animate__animated animate__fadeInUp" data-wow-delay="1s">
+              <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <div class="col-12 text-center wow animate__animated animate__zoomIn" data-wow-delay="1.1s">
+              <button type="submit" class="cta-btn  btn btn-dark px-5">
+                Send Message
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 </section>
-<h6 class="sub-title text-center"> Our Design</h6>
+
+<h6 class="sub-title text-center"> Our Poster Design</h6>
 <h2 class="text-center"> Our Template</h2>
 <div class="slider">
       
@@ -658,69 +657,95 @@ We craft powerful real estate stories that turn luxury projects into global succ
 
   </div>
 </div>
-<!-- ===== Contact Section End ===== -->
 
-  <!-- Footer Section Start -->
-<footer class="footer-section text-white pt-5 pb-4" style="background-color:#0E1A2B;">
+<!-- ===== Contact Section End ===== -->
+ <!-- ===== Floating Action Buttons ===== -->
+<div class="floating-icons">
+  <a href="tel:+917094858696" class="float-btn phone-btn" title="Call Now">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+
+  <a href="https://wa.me/917094858696" target="_blank" class="float-btn whatsapp-btn" title="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <button class="float-btn scroll-top-btn" id="scrollTopBtn" title="Go to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+</div>
+
+<!-- ===== Footer Section Start ===== -->
+<footer class="footer-section text-white">
   <div class="container">
     <div class="row g-4">
       
       <!-- Brand Info -->
-      <div class="col-lg-4 col-md-6">
-        <h3 class="fw-bold mb-3" style="color:#00B4D8;">Puzzle Diplomats</h3>
-        <p>We help real estate brands grow with strategy, creative content, and performance marketing — turning your projects into profitable success stories.</p>
+      <div class="col-lg-4 col-md-6 wow animate__animated animate__fadeInLeft" data-wow-delay="0.2s">
+        <div class="footer-logo mb-3">
+          <img src="assets/image/logo.png" alt="Puzzle Diplomats Logo" class="img-fluid" />
+        </div>
+        <p>
+          We help real estate brands grow with strategy, creative content, and performance marketing —
+          turning your projects into profitable success stories.
+        </p>
         <div class="social-links mt-3">
-          <a href="#" class="me-3 text-white"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" class="me-3 text-white"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" class="me-3 text-white"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" class="text-white"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61566677074509" target="_blank" class="me-2"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/in/puzzle-diplomats-digitalmarketing/" target="_blank" class="me-2"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/puzzlediplomatsmarketing/" target="_blank" class="me-2"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/917094858696" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
 
       <!-- Quick Links -->
-      <div class="col-lg-2 col-md-6">
-        <h5 class="fw-bold mb-3" style="color:#00B4D8;">Quick Links</h5>
+      <div class="col-lg-2 col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+        <h5 class="fw-bold mb-3">Quick Links</h5>
         <ul class="list-unstyled footer-links">
-          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
-          <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
-          <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
-          <!-- <li><a href="work.html" class="text-white text-decoration-none">Work</a></li> -->
-          <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
 
       <!-- Services -->
-      <div class="col-lg-3 col-md-6">
-        <h5 class="fw-bold mb-3" style="color:#00B4D8;">Our Solutions</h5>
+      <div class="col-lg-3 col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+        <h5 class="fw-bold mb-3">Our Solutions</h5>
         <ul class="list-unstyled footer-links">
-          <li><a href="#" class="text-white text-decoration-none">Brand Strategy</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Content & Creative</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Lead Generation</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Performance Marketing</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Web Development</a></li>
+          <li><a href="service.html">Brand Strategy</a></li>
+          <li><a href="service.html">Content & Creative</a></li>
+          <li><a href="service.html">Lead Generation</a></li>
+          <li><a href="service.html">Performance Marketing</a></li>
+          <li><a href="service.html">Web Development</a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="col-lg-3 col-md-6">
-        <h5 class="fw-bold mb-3" style="color:#00B4D8;">Get In Touch</h5>
+      <div class="col-lg-3 col-md-6 wow animate__animated animate__fadeInRight" data-wow-delay="0.5s">
+        <h5 class="fw-bold mb-3">Get In Touch</h5>
         <ul class="list-unstyled footer-contact">
-          <li class="mb-2"><i class="fa-solid fa-location-dot me-2"></i> Hosur, Tamil Nadu, India</li>
-          <li class="mb-2"><i class="fa-solid fa-envelope me-2"></i> info@puzzlediplomats.com</li>
-          <li><i class="fa-solid fa-phone me-2"></i> +91 98765 43210</li>
+          <li class="mb-2"><i class="fa-solid fa-location-dot me-2"></i> Bangalore, Dubai</li>
+          <li class="mb-2"><i class="fa-solid fa-envelope me-2"></i> puzzle@diplomats.co.in</li>
+          <li><i class="fa-solid fa-phone me-2"></i> +91 70948 58696</li>
         </ul>
       </div>
     </div>
 
-    <hr class="my-4" style="border-color: rgba(255,255,255,0.15);">
+    <hr class="my-4">
 
     <div class="row text-center">
       <div class="col-12">
-        <p class="mb-0 small">&copy; 2025 Puzzle Diplomats. All Rights Reserved. Empowering Real Estate Growth from Hosur.</p>
+        <p class="mb-0 small">
+          &copy; 2025 Puzzle Diplomats. All Rights Reserved. Empowering Real Estate Growth from Hosur.
+        </p>
       </div>
     </div>
   </div>
 </footer>
+<!-- ===== Footer Section End ===== -->
+
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <script>
   // Initialize WOW.js

@@ -28,6 +28,28 @@
         },
       },
     });
+    // Define each slider with direction control
+    const sliders = [
+      { selector: '.slider1', reverse: false }, // top→bottom
+      { selector: '.slider2', reverse: true },  // bottom→top
+      { selector: '.slider3', reverse: false }, // top→bottom
+      { selector: '.slider4', reverse: true }   // bottom→top
+    ];
+
+    sliders.forEach(({ selector, reverse }) => {
+      new Swiper(selector, {
+        direction: 'vertical',
+        loop: true,
+        slidesPerView: 1,
+        speed: 2500,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+          reverseDirection: reverse,
+        },
+        allowTouchMove: false,
+      });
+    });
 window.addEventListener("scroll", () => {
   const steps = document.querySelectorAll(".timeline-step");
   const connectors = document.querySelectorAll(".timeline-connector");

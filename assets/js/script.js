@@ -1,3 +1,39 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const swiper = new Swiper(".workflow-slider", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
+    grabCursor: true,
+
+    // ✅ Autoplay added
+    autoplay: {
+      delay: 3000, // time between slides (in ms)
+      disableOnInteraction: false, // keeps autoplay after user interaction
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    observer: true,
+    observeParents: true,
+
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+});
+
 function animateCounter(counter) {
   const target = +counter.getAttribute('data-target');
   const duration = 1000; // 1 second animation
@@ -17,6 +53,14 @@ function animateCounter(counter) {
     }
   }, 1000 / frameRate);
 }
+// Optional: Restart animations on tab visibility change
+document.addEventListener("visibilitychange", () => {
+  const carousels = document.querySelectorAll(".carousel-track");
+  carousels.forEach(track => {
+    track.style.animationPlayState = document.hidden ? "paused" : "running";
+  });
+});
+
 
 // Generic observer function that works for any section
 function observeCounters(sectionSelector) {

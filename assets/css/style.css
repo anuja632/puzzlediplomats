@@ -2193,7 +2193,7 @@ padding: 20px;
 
     .services-carousel-section p {
       text-align: center;
-      color: #cfcfcf;
+      color: #000;
       max-width: 700px;
       margin: 0 auto 50px;
       font-size: 1rem;
@@ -2256,5 +2256,69 @@ padding: 20px;
     @media (max-width: 768px) {
       .service-card img {
         height: 260px;
+      }
+    }
+
+
+        .tech-section {
+          background: linear-gradient(90deg, #e60026 0%, #3000b0 100%);
+
+  /* background: linear-gradient(90deg, #ea0000, #00008b); */
+      border-radius: 20px;
+      padding: 60px 40px;
+      margin: 60px auto;
+      max-width: 1300px;
+    }
+
+       .tech-section .section-title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      color: #fff;
+    }
+
+      .tech-section .section-subtitle {
+      color: #fff;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .feature-list li {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color:#fff;
+    }
+
+    .feature-list li::before {
+      content: "✔";
+      color: #7a6efb;
+      font-weight: bold;
+    }
+
+
+    .brand img {
+      width: 100%;
+      height:500px;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .images-row img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 992px) {
+      .images-row .col-md-4 {
+        margin-bottom: 20px;
       }
     }
